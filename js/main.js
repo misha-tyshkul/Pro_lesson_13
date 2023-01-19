@@ -64,51 +64,142 @@ const tvCatalog = [
   },
 ];
 
-catalog.addEventListener("click", showLaptops);
-function showLaptops(event) {
+const arr = "";
+function addProducts(arr) {
   const submenu = document.getElementsByClassName("submenu")[0];
   const submenuList = document.createElement("ul");
+  submenuList.classList.add("catalog");
 
-  for (let key of laptopCatalog) {
+  for (let key of arr) {
     let submenuItem = document.createElement("li");
-    submenuItem.innerHTML = `<a href='#'>${key.name}</a>`;
+    submenuItem.classList.add("catalog-item");
+    submenuItem.innerHTML = `<a href='#' class='catalog-link'>${key.name}</a>`;
     submenuList.append(submenuItem);
   }
   submenu.append(submenuList);
-  submenu.style.display = "inline-block";
+}
+addProducts(arr);
+
+catalog.addEventListener("click", showLaptop);
+function showLaptop(event) {
+  const submenu = document.getElementsByClassName("submenu")[0];
+  const link = document.getElementsByClassName("menu-categories_link")[0];
+
+  let target = event.target;
+  if (target == link) {
+    addProducts(laptopCatalog);
+    submenu.style.display = "inline-block";
+  }
 }
 
-// catalog.addEventListener("click", showSmartphones);
-// function showSmartphones(event) {
-//   const submenu = document.getElementsByClassName("submenu")[0];
-//   const submenuList = document.createElement("ul");
+catalog.addEventListener("click", showSmartphone);
+function showSmartphone(event) {
+  const submenu = document.getElementsByClassName("submenu")[0];
+  const link = document.getElementsByClassName("menu-categories_link")[1];
+  let target = event.target;
+  if (target == link) {
+    addProducts(smartphoneCatalog);
+    submenu.style.display = "inline-block";
+  }
+}
 
-//   for (let key of smartphoneCatalog) {
-//     let submenuItem = document.createElement("li");
-//     submenuItem.innerHTML = `<a href='#'>${key.name}</a>`;
-//     submenuList.append(submenuItem);
-//   }
-//   submenu.append(submenuList);
-//   submenu.style.display = "inline-block";
-// }
+catalog.addEventListener("click", showTV);
+function showTV(event) {
+  const submenu = document.getElementsByClassName("submenu")[0];
+  const link = document.getElementsByClassName("menu-categories_link")[2];
+  let target = event.target;
+  if (target == link) {
+    addProducts(tvCatalog);
+    submenu.style.display = "inline-block";
+  }
+}
+//Информация для ноутбуков
+function addInfo1(arr) {
+  const info = document.getElementsByClassName("information")[0];
 
-// catalog.addEventListener("click", showTV);
-// function showTV(event) {
-//   const submenu = document.getElementsByClassName("submenu")[0];
-//   const submenuList = document.createElement("ul");
+  let infoText = document.createElement("p");
+  infoText.innerHTML = `${laptopCatalog[0].information}`;
+  infoText.style.width = "1000px";
+  info.style.display = "inline-block";
+  info.append(infoText);
+}
+addProducts(arr);
 
-//   for (let key of tvCatalog) {
-//     let submenuItem = document.createElement("li");
-//     submenuItem.innerHTML = `<a href='#'>${key.name}</a>`;
-//     submenuList.append(submenuItem);
-//   }
-//   submenu.append(submenuList);
-//   submenu.style.display = "inline-block";
-// }
+function addInfo2(arr) {
+  const info = document.getElementsByClassName("information")[0];
 
-// catalog.addEventListener("click", showInformation);
-// function showInformation(event) {
-//   const submenu = document.getElementsByClassName("infornation")[0];
-//   const submenuList = document.createElement("p");
+  let infoText = document.createElement("p");
+  infoText.innerHTML = `${laptopCatalog[1].information}`;
+  infoText.style.width = "1000px";
+  info.style.display = "inline-block";
+  info.append(infoText);
+}
+addProducts(arr);
 
+function addInfo3(arr) {
+  const info = document.getElementsByClassName("information")[0];
+
+  let infoText = document.createElement("p");
+  infoText.innerHTML = `${laptopCatalog[2].information}`;
+  infoText.style.width = "1000px";
+  info.style.display = "inline-block";
+  info.append(infoText);
+}
+addProducts(arr);
+
+const submenu = document.getElementsByClassName("submenu")[0];
+
+submenu.addEventListener("click", showInfoLaptop1);
+function showInfoLaptop1(event) {
+  const info = document.getElementsByClassName("information")[0];
+  const catalogLink = document.getElementsByClassName("catalog-link")[0];
+
+  let target = event.target;
+  if (target == catalogLink) {
+    addInfo1(laptopCatalog);
+    info.style.display = "inline-block";
+  } else {
+    laptopCatalog.remove(catalogLink);
+  }
+  // let infoBtn = document.createElement("button");
+  // infoBtn.innerHTML = `Купить`;
+  // info.append(infoBtn);
+}
+
+submenu.addEventListener("click", showInfoLaptop2);
+function showInfoLaptop2(event) {
+  const info = document.getElementsByClassName("information")[0];
+  const catalogLink = document.getElementsByClassName("catalog-link")[1];
+
+  let target = event.target;
+  if (target == catalogLink) {
+    addInfo2(laptopCatalog);
+    info.style.display = "inline-block";
+  }
+  // let infoBtn = document.createElement("button");
+  // infoBtn.innerHTML = `Купить`;
+  // info.append(infoBtn);
+}
+
+submenu.addEventListener("click", showInfoLaptop3);
+function showInfoLaptop3(event) {
+  const info = document.getElementsByClassName("information")[0];
+  const catalogLink = document.getElementsByClassName("catalog-link")[2];
+
+  let target = event.target;
+  if (target == catalogLink) {
+    addInfo3(laptopCatalog);
+    info.style.display = "inline-block";
+  }
+  // let infoBtn = document.createElement("button");
+  // infoBtn.innerHTML = `Купить`;
+  // info.append(infoBtn);
+}
+
+// const info = document.getElementsByClassName("information")[0];
+// info.addEventListener("click", buyButton);
+// function buyButton() {
+//   let infoBtn = document.createElement("button");
+//   infoBtn.innerHTML = `Купить`;
+//   info.append(infoBtn);
 // }
