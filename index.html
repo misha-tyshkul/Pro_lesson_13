@@ -5,27 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="menu">
       <ul class="menu-categories">
         <li class="menu-categories_item">
-          <a href="#" class="menu-categories_link">Ноутбуки</a>
+          <a href="#" class="menu-categories_link" id="menu-laptop">Ноутбуки</a>
         </li>
         <li class="menu-categories_item">
-          <a href="#" class="menu-categories_link">Смартфоны</a>
+          <a href="#" class="menu-categories_link" id="menu-smartphone">Смартфоны</a>
         </li>
         <li class="menu-categories_item">
-          <a href="#" class="menu-categories_link">Телевизоры</a>
+          <a href="#" class="menu-categories_link" id="menu-tv">Телевизоры</a>
         </li>
       </ul>
     </div>
 
-    <div class="submenu"></div>
+    <div class="laptop-list">
+      <div class="laptop" id="laptop-1">
+        <h3 class="laptop-name">Ноутбук Acer Aspire 7 A715-42G-R8BL (NH.QDLEU.008) Charcoal Black</h3>
+        <div class="laptop-description">
+          <p>
+            Экран 15.6" IPS (1920x1080) Full HD 144 Гц, матовый / AMD Ryzen 5 5500U (2.1 - 4.0 ГГц) / RAM 16 ГБ / SSD
+            512 ГБ / nVidia GeForce RTX 3050 Ti, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 2.15 кг
+            / черный
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+      <div class="laptop" id="laptop-2">
+        <h3 class="laptop-name">Ноутбук ASUS TUF Gaming F15 FX506LHB-HN324 (90NR03U2-M008H0)</h3>
+        <div class="laptop-description">
+          <p>
+            Экран 15.6" IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i5-10300H (2.5 - 4.5 ГГц) / RAM 16 ГБ / SSD
+            512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 2.3 кг /
+            черный
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+      <div class="laptop" id="laptop-3">
+        <h3 class="laptop-name">Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold</h3>
+        <div class="laptop-description">
+          <p>
+            Экран 13.3" Retina (2560x1600) WQXGA, глянцевый / Apple M1 / RAM 8 ГБ / SSD 256 ГБ / Apple M1 Graphics /
+            Wi-Fi / Bluetooth / macOS Big Sur / 1.29 кг / золотой
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+    </div>
 
-    <div class="information"></div>
+    <div class="smartphone-list">
+      <div class="smartphone" id="smartphone-1">
+        <h3 class="smartphone-name">
+          Мобильный телефон Samsung Galaxy S21 FE 6/128GB Lavender (SM-G990BLVDSEK/SM-G990BLVFSEK)
+        </h3>
+        <div class="smartphone-description">
+          <p>
+            Экран (6.4", Dynamic AMOLED 2X, 2340x1080) / Qualcomm Snapdragon 888 (2.84 ГГц) / тройная основная камера:
+            12 Мп + 12 Мп + 8 Мп, фронтальная 32 Мп / RAM 6 ГБ / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS /
+            поддержка 2х SIM-карт (Nano-SIM) / Android 11 / 4500 мА*ч
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+      <div class="smartphone" id="smartphone-2">
+        <h3 class="smartphone-name">Мобильный телефон Apple iPhone 13 128GB Pink (MLPH3HU/A)</h3>
+        <div class="smartphone-description">
+          <p>
+            Экран (6.1", OLED (Super Retina XDR), 2532x1170) / Apple A15 Bionic / двойная основная камера: 12 Мп + 12
+            Мп, фронтальная камера: 12 Мп / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS / Nano-SIM, eSIM / iOS 15
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+      <div class="smartphone" id="smartphone-3">
+        <h3 class="smartphone-name">
+          Мобильный телефон Motorola G32 6/128GB Grey (PAUU0027RS) (без зарядного устройства)
+        </h3>
+        <div class="smartphone-description">
+          <p>
+            Экран (6.5", LCD, 2400x1080) / Qualcomm Snapdragon 680 (2.4 ГГц) / основная тройная камера: 50 Мп + 8 Мп + 2
+            Мп, фронтальная камера: 16 Мп / RAM 6 ГБ / 128 ГБ встроенной памяти + microSD (до 1 ТБ) / 3G / LTE / GPS /
+            поддержка 2х SIM-карт (Nano-SIM) / Android 12 / 5000 мА*ч
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+    </div>
 
-    <!-- <script src="js/test.js"></script> -->
-    <script src="js/main.js"></script>
+    <div class="tv-list">
+      <div class="tv" id="tv-1">
+        <h3 class="tv-name">Телевизор Samsung UE50AU7100UXUA</h3>
+        <div class="tv-description">
+          <p>
+            Диагональ экрана: 50 / Разрешение: 3840x2160 / Операционная система: Tizen / Диапазоны цифрового тюнера:
+            DVB-C, DVB-S2, DVB-T2
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+      <div class="tv" id="tv-2">
+        <h3 class="tv-name">Телевизор Hisense 43E7HQ</h3>
+        <div class="tv-description">
+          <p>
+            Диагональ экрана: 43 / Разрешение: 3840x2160 / Операционная система: VIDAA U5.0 / Диапазоны цифрового
+            тюнера: DVB-C, DVB-S, DVB-S2,DVB-T, DVB-T2
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+      <div class="tv" id="tv-3">
+        <h3 class="tv-name">Телевизор Xiaomi Mi TV P1 55 Black</h3>
+        <div class="tv-description">
+          <p>
+            Диагональ экрана: 55 / Разрешение: 3840x2160 / Операционная система: Android 10.0 / Диапазоны цифрового
+            тюнера: DVB-T, DVB-T2, DVB-T2
+          </p>
+          <button>Купити</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/test.js"></script>
   </body>
 </html>

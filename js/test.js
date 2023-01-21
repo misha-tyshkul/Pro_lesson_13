@@ -1,73 +1,131 @@
-const catalog = document.getElementsByClassName("menu")[0];
-catalog.style.display = "inline-block";
+//Show laptop menu
+const menuLaptop = document.getElementById("menu-laptop");
+const laptopList = document.getElementsByClassName("laptop-list")[0];
+menuLaptop.addEventListener("click", function (event) {
+  laptopList.classList.toggle("show");
+});
+//Laptop 1
+const laptop1 = document.querySelector("#laptop-1 > h3");
+const laptop1Info = document.querySelector("#laptop-1 > .laptop-description");
+laptop1.addEventListener("click", function (event) {
+  laptop1Info.classList.toggle("show");
+});
+//Laptop2
+const laptop2 = document.querySelector("#laptop-2 > h3");
+const laptop2Info = document.querySelector("#laptop-2 > .laptop-description");
+laptop2.addEventListener("click", function (event) {
+  laptop2Info.classList.toggle("show");
+});
+//Laptop3
+const laptop3 = document.querySelector("#laptop-3 > h3");
+const laptop3Info = document.querySelector("#laptop-3 > .laptop-description");
+laptop3.addEventListener("click", function (event) {
+  laptop3Info.classList.toggle("show");
+});
+//Laptop button
+const laptop1Btn = document.querySelector("#laptop-1 > .laptop-description > button");
+laptop1Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  laptop1Info.classList.toggle("show");
+  laptopList.classList.toggle("show");
+});
+const laptop2Btn = document.querySelector("#laptop-2 > .laptop-description > button");
+laptop2Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  laptop2Info.classList.toggle("show");
+  laptopList.classList.toggle("show");
+});
+const laptop3Btn = document.querySelector("#laptop-3 > .laptop-description > button");
+laptop3Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  laptop3Info.classList.toggle("show");
+  laptopList.classList.toggle("show");
+});
 
-const laptopCatalog = [
-  {
-    id: 1,
-    name: "Ноутбук Acer Aspire 7 A715-42G-R8BL (NH.QDLEU.008) Charcoal Black",
-    information:
-      'Экран 15.6" IPS (1920x1080) Full HD 144 Гц, матовый / AMD Ryzen 5 5500U (2.1 - 4.0 ГГц) / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce RTX 3050 Ti, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 2.15 кг / черный',
-  },
-  {
-    id: 2,
-    name: "Ноутбук ASUS TUF Gaming F15 FX506LHB-HN324 (90NR03U2-M008H0)",
-    information:
-      'Экран 15.6" IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i5-10300H (2.5 - 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 2.3 кг / черный',
-  },
-  {
-    id: 3,
-    name: 'Ноутбук Apple MacBook Air 13" M1 256GB 2020 (MGND3) Gold',
-    information:
-      'Экран 13.3" Retina (2560x1600) WQXGA, глянцевый / Apple M1 / RAM 8 ГБ / SSD 256 ГБ / Apple M1 Graphics / Wi-Fi / Bluetooth / macOS Big Sur / 1.29 кг / золотой',
-  },
-];
+//Show smartphone menu
+const menuSmartphone = document.getElementById("menu-smartphone");
+const smartphoneList = document.getElementsByClassName("smartphone-list")[0];
+menuSmartphone.addEventListener("click", function (event) {
+  smartphoneList.classList.toggle("show");
+});
+//Smartphone1
+const smartphone1 = document.querySelector("#smartphone-1 > h3");
+const smartphone1Info = document.querySelector("#smartphone-1 > .smartphone-description");
+smartphone1.addEventListener("click", function (event) {
+  smartphone1Info.classList.toggle("show");
+});
+//Smartphone2
+const smartphone2 = document.querySelector("#smartphone-2 > h3");
+const smartphone2Info = document.querySelector("#smartphone-2 > .smartphone-description");
+smartphone2.addEventListener("click", function (event) {
+  smartphone2Info.classList.toggle("show");
+});
+//Smartphone3
+const smartphone3 = document.querySelector("#smartphone-3 > h3");
+const smartphone3Info = document.querySelector("#smartphone-3 > .smartphone-description");
+smartphone3.addEventListener("click", function (event) {
+  smartphone3Info.classList.toggle("show");
+});
+//Smartphone button
+const smartphone1Btn = document.querySelector("#smartphone-1 > .smartphone-description > button");
+smartphone1Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  smartphone1Info.classList.toggle("show");
+  smartphoneList.classList.toggle("show");
+});
+const smartphone2Btn = document.querySelector("#smartphone-2 > .smartphone-description > button");
+smartphone2Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  smartphone2Info.classList.toggle("show");
+  smartphoneList.classList.toggle("show");
+});
+const smartphone3Btn = document.querySelector("#smartphone-3 > .smartphone-description > button");
+smartphone3Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  smartphone3Info.classList.toggle("show");
+  smartphoneList.classList.toggle("show");
+});
 
-const smartphoneCatalog = [
-  {
-    id: 1,
-    name: "Мобильный телефон Samsung Galaxy S21 FE 6/128GB Lavender (SM-G990BLVDSEK/SM-G990BLVFSEK)",
-    information:
-      'Экран (6.4", Dynamic AMOLED 2X, 2340x1080) / Qualcomm Snapdragon 888 (2.84 ГГц) / тройная основная камера: 12 Мп + 12 Мп + 8 Мп, фронтальная 32 Мп / RAM 6 ГБ / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS / поддержка 2х SIM-карт (Nano-SIM) / Android 11 / 4500 мА*ч',
-  },
-  {
-    id: 2,
-    name: "Мобильный телефон Apple iPhone 13 128GB Pink (MLPH3HU/A)",
-    information:
-      'Экран (6.1", OLED (Super Retina XDR), 2532x1170) / Apple A15 Bionic / двойная основная камера: 12 Мп + 12 Мп, фронтальная камера: 12 Мп / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS / Nano-SIM, eSIM / iOS 15',
-  },
-  {
-    id: 3,
-    name: "Мобильный телефон Motorola G32 6/128GB Grey (PAUU0027RS) (без зарядного устройства)",
-    information:
-      'Экран (6.5", LCD, 2400x1080) / Qualcomm Snapdragon 680 (2.4 ГГц) / основная тройная камера: 50 Мп + 8 Мп + 2 Мп, фронтальная камера: 16 Мп / RAM 6 ГБ / 128 ГБ встроенной памяти + microSD (до 1 ТБ) / 3G / LTE / GPS / поддержка 2х SIM-карт (Nano-SIM) / Android 12 / 5000 мА*ч',
-  },
-];
-
-const tvCatalog = [
-  {
-    id: 1,
-    name: "Телевизор Samsung UE50AU7100UXUA",
-    information:
-      "Диагональ экрана: 50 / Разрешение: 3840x2160 / Операционная система: Tizen / Диапазоны цифрового тюнера: DVB-C, DVB-S2, DVB-T2",
-  },
-  {
-    id: 2,
-    name: "Телевизор Hisense 43E7HQ",
-    information:
-      "Диагональ экрана: 43 / Разрешение: 3840x2160 / Операционная система: VIDAA U5.0 / Диапазоны цифрового тюнера: DVB-C, DVB-S, DVB-S2,DVB-T, DVB-T2",
-  },
-  {
-    id: 3,
-    name: "Телевизор Xiaomi Mi TV P1 55 Black",
-    information:
-      "Диагональ экрана: 55 / Разрешение: 3840x2160 / Операционная система: Android 10.0 / Диапазоны цифрового тюнера: DVB-T, DVB-T2, DVB-T2",
-  },
-];
-
-let out = "";
-for (let key in laptopCatalog) {
-  out = +`${laptopCatalog[key].name}`;
-}
-
-const submenu = document.getElementsByClassName("submenu")[0];
-submenu.innerHTML = out;
+//Show tv menu
+const menuTv = document.getElementById("menu-tv");
+const tvList = document.getElementsByClassName("tv-list")[0];
+menuTv.addEventListener("click", function (event) {
+  tvList.classList.toggle("show");
+});
+//TV1
+const tv1 = document.querySelector("#tv-1 > h3");
+const tv1Info = document.querySelector("#tv-1 > .tv-description");
+tv1.addEventListener("click", function (event) {
+  tv1Info.classList.toggle("show");
+});
+//TV2
+const tv2 = document.querySelector("#tv-2 > h3");
+const tv2Info = document.querySelector("#tv-2 > .tv-description");
+tv2.addEventListener("click", function (event) {
+  tv2Info.classList.toggle("show");
+});
+//TV3
+const tv3 = document.querySelector("#tv-3 > h3");
+const tv3Info = document.querySelector("#tv-3 > .tv-description");
+tv3.addEventListener("click", function (event) {
+  tv3Info.classList.toggle("show");
+});
+//TV button
+const tv1Btn = document.querySelector("#tv-1 > .tv-description > button");
+tv1Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  tv1Info.classList.toggle("show");
+  tvList.classList.toggle("show");
+});
+const tv2Btn = document.querySelector("#tv-2 > .tv-description > button");
+tv2Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  tv2Info.classList.toggle("show");
+  tvList.classList.toggle("show");
+});
+const tv3Btn = document.querySelector("#tv-3 > .tv-description > button");
+tv3Btn.addEventListener("click", function (event) {
+  alert("Куплено");
+  tv3Info.classList.toggle("show");
+  tvList.classList.toggle("show");
+});
